@@ -111,7 +111,7 @@ task-cli mark-in-progress 1
 task-tracker-cli/
 │
 ├── app.js          # Main CLI logic
-├── tasks.json      # Local task storage
+├── tasks.json      # Task storage
 ├── package.json    # CLI configuration and bin setup
 └── README.md       # Project documentation
 ```

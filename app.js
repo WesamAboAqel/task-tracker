@@ -4,21 +4,24 @@ import fs from "fs"
 
 const [, , command,...args] = process.argv
 
+// Check for File Existance
 if(!fs.existsSync("tasks.json")){
     fs.writeFileSync("tasks.json", "[]")
 }
-// console.log(args)
 
+// File Reading Helper Function
 const readFile = () => {
     const rawData = fs.readFileSync("tasks.json", "utf8")
     return JSON.parse(rawData)
 
 }
 
+// File Saving Helper Function
 const saveFile = (tasks) => {
     fs.writeFileSync("tasks.json", JSON.stringify(tasks,null,4))
 }
 
+// Tasks Printing
 const listFunction = () => {
     const tasks = readFile()
     const status = args[0]
@@ -37,7 +40,8 @@ const listFunction = () => {
         })
     return
 }
-    
+
+// Updating Tasks
 const updateFunction = () => {
     const tasks = readFile()
 
@@ -54,6 +58,7 @@ const updateFunction = () => {
     saveFile(tasks)
 }
 
+// Delete a Task
 const deleteFunction = () => {
     const tasks = readFile()
 
@@ -68,6 +73,7 @@ const deleteFunction = () => {
     saveFile(tasks)
 }
 
+// Finishing a Task
 const markDoneFunction = () => {
     const tasks = readFile()
 
@@ -84,6 +90,7 @@ const markDoneFunction = () => {
     saveFile(tasks)
 } 
 
+// Starting a Task
 const markInProgressFunction = () => {
     const tasks = readFile()
 
@@ -100,6 +107,7 @@ const markInProgressFunction = () => {
     saveFile(tasks)
 } 
 
+// Adding a Task
 const addFunction = () => {
     const tasks = readFile()
 
@@ -119,6 +127,7 @@ const addFunction = () => {
 
     console.log(`Task added successfully (ID: ${id})`)
 }
+
 
 if(command === "list"){
     listFunction()
