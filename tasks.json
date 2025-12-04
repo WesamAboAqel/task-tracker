@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "description": "Brushing my Teeth",
+        "status": "todo",
+        "createdAt": "2025-12-03T21:02:52.630Z",
+        "updatedAt": "2025-12-03T21:02:52.631Z"
+    },
+    {
+        "id": 2,
+        "description": "Nose Medicine",
+        "status": "in-progress",
+        "createdAt": "2025-12-03T21:03:35.240Z",
+        "updatedAt": "2025-12-03T21:44:32.291Z"
+    },
+    {
+        "id": 3,
+        "description": "LeetCode Problem",
+        "status": "done",
+        "createdAt": "2025-12-03T21:06:58.724Z",
+        "updatedAt": "2025-12-03T21:44:57.893Z"
+    }
+]
